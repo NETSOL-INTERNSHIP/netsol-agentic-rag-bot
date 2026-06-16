@@ -1,0 +1,21 @@
+SOURCE TITLE: Loan Origination Software | AI-Enabled Credit Decisioning
+SOURCE FILE: products_loan-origination.html
+==================================================
+
+Loan Origination Software | AI-Enabled Credit Decisioning
+Loan Origination
+Origination that scales
+with your lending model
+Unified origination platform for quote-to-funding journey, designed to adapt across channels, lending models, and asset complexity.
+Intelligence applied across every role in origination
+Transcend Finance embeds intelligence directly into day-to-day origination workflows. AI is applied where it reduces effort, improves consistency, and strengthens decisions without removing human control or adding operational complexity.
+Dealers and sales
+Brokers and partners
+Credit and underwriting
+Operations and compliance
+Customers
+Accelerate deal flow without increasing operational friction.
+Real-time eligibility checks and offer comparisons are generated from validated application data to support faster approvals.
+Customer consent is captured and recorded to support GDPR and data privacy compliance.
+Automated data verification reduces re-entry and back-and-forth with lenders.
+Guided application flows ensure submissions meet lender and policy requirements before reviewing.

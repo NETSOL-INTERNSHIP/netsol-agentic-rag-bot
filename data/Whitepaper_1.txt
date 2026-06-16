@@ -1,0 +1,5 @@
+SOURCE TITLE: Whitepaper
+SOURCE FILE: insights_whitepapers_building-the-auto-captive-stack-for-an-ai-first-api-connected-composable-and-platformized-era.html
+==================================================
+
+Whitepaper
