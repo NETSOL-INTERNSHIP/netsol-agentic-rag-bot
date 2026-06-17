@@ -1,8 +1,0 @@
-SOURCE TITLE: Transcend Marketplace | API-First Finance & Leasing Components
-SOURCE FILE: marketplace.html
-==================================================
-
-Transcend Marketplace | API-First Finance & Leasing Components
-Transcend Marketplace
-Connect, configure & innovate
-From originations to servicing, experience the most intuitive finance and leasing products in asset finance.

@@ -1,9 +1,0 @@
-SOURCE TITLE: Data Engineering Services | Pipelines, ETL & Data Warehousing
-SOURCE FILE: services_data-engineering.html
-==================================================
-
-Data Engineering Services | Pipelines, ETL & Data Warehousing
-Data Engineering
-Robust
-data engineering services & solutions
-With AWS services for data engineering, build scalable data pipelines for your business growth.

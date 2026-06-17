@@ -1,5 +1,0 @@
-SOURCE TITLE: Whitepaper
-SOURCE FILE: insights_whitepapers_apis-in-financial-services-unlocking-the-future-with-api-first-solutions.html
-==================================================
-
-Whitepaper

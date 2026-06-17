@@ -1,5 +1,0 @@
-SOURCE TITLE: Whitepaper
-SOURCE FILE: insights_whitepapers_fraud-detection-credit-decisioning-in-digital-originations.html
-==================================================
-
-Whitepaper
