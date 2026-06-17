@@ -1,52 +1,42 @@
-import numpy as np
+import chromadb
 from sentence_transformers import SentenceTransformer
 
 from .config import Config
-from .store import load_chunks
 
-# Loaded once at module level
+_collection = None
 _model = None
-_chunks = None
-_embeddings = None
 
 
-def _ensure_loaded():
-    global _model, _chunks, _embeddings
-
-    if _chunks is not None:
-        return
-
-    _chunks, _embeddings = load_chunks()
-    if _chunks is None:
-        raise RuntimeError("No chunks found. Run /ingest first.")
-
-    print(f"Loaded {_len()} chunks into memory.")
-
-    if _model is None:
+def _get_resources():
+    global _collection, _model
+    if _collection is None:
         _model = SentenceTransformer(Config.EMBEDDING_MODEL)
-
-
-def _len():
-    return len(_chunks)
+        client = chromadb.PersistentClient(path=Config.CHROMA_DIR)
+        _collection = client.get_collection(name="rag_documents")
+    return _collection, _model
 
 
 def retrieve(question, top_k=None):
-    _ensure_loaded()
+    collection, model = _get_resources()
     top_k = top_k or Config.TOP_K
 
-    # Embed the question
-    query_embedding = _model.encode([question])
+    # Manually embed the question
+    query_embedding = model.encode([question], normalize_embeddings=True).tolist()
 
-    # Cosine similarity
-    scores = np.dot(_embeddings, query_embedding.T).flatten()
-    top_indices = np.argsort(scores)[::-1][:top_k]
+    # Query ChromaDB
+    results = collection.query(
+        query_embeddings=query_embedding,
+        n_results=top_k,
+        include=["documents", "metadatas", "distances"]
+    )
 
-    results = []
-    for idx in top_indices:
-        results.append({
-            "text": _chunks[idx]["text"],
-            "source": _chunks[idx]["source"],
-            "score": float(scores[idx])
+    # Format results
+    formatted_results = []
+    for i in range(len(results['ids'][0])):
+        formatted_results.append({
+            "text": results['documents'][0][i],
+            "source": results['metadatas'][0][i]['source'],
+            "score": 1 - results['distances'][0][i] 
         })
 
-    return results
+    return formatted_results

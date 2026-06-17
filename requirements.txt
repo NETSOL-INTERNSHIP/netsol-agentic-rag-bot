@@ -1,0 +1,11 @@
+flask
+python-dotenv
+sentence-transformers
+langchain
+langchain-core
+langchain-groq
+langchain-openai
+langchain-anthropic
+langchain-google-genai
+flask-cors
+chromadb

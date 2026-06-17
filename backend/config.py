@@ -15,7 +15,7 @@ class Config:
     
     # Bulletproof absolute paths
     DATA_DIR = os.path.join(BASE_DIR, "data")
-    VECTORSTORE_DIR = os.path.join(BASE_DIR, "backend", "vectorstore")
+    CHROMA_DIR = os.path.join(BASE_DIR, "backend", "chroma_db")
     
     TOP_K = 5
 
